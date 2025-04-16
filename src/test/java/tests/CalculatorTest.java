@@ -17,11 +17,20 @@ public class CalculatorTest extends BaseTest {
 
     @Test
     public void testAddition() {
-        CalculatorPage page = new CalculatorPage(driver);
-        page.addNumbers();
-        String actual = page.getResult();
-        Assert.assertEquals(actual, Constants.EXPECTED_RESULT, "Addition result mismatch");
-        System.out.println("Test case passed: 9 + 6 = " + actual);
+    	try
+    	{
+	        CalculatorPage page = new CalculatorPage(driver);
+	        page.addNumbers();
+	        String actual = page.getResult();
+	        test.info("Addition is "+actual);
+	        Assert.assertEquals(actual, Constants.EXPECTED_RESULT, "Addition result mismatch");
+	        System.out.println("Test case passed: 9 + 6 = " + actual);
+	        test.pass("Addition test case passed");
+    	}
+    	catch (Exception e) {
+			// TODO: handle exception
+    		test.fail("Addition test case failed due to: "+e.getMessage());
+		}
     }
 
     @AfterMethod

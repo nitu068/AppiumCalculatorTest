@@ -47,6 +47,12 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.12.0</version>
         </dependency>
+        <!-- ExtentReports -->
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.1.1</version>
+</dependency>
 
         <!-- Logging (optional but helpful) -->
         <dependency>
